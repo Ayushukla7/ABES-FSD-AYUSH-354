@@ -1,0 +1,45 @@
+ body {
+ font-family: Arial, sans-serif;
+ background: #09c3d8;
+ color: #333;
+ }
+ h2 { text-align: center; }
+
+ .form-card {
+ width: 400px;
+ margin: 20px auto;
+ padding: 16px;
+ background: rgb(241, 197, 0);
+ border: 1px solid #ddd;
+ border-radius: 8px;
+ }
+
+ label {
+ display: block;
+ margin: 12px 0;
+ }
+
+ input, select {
+ width: 100%;
+ padding: 8px;
+ border: 1px solid #dc0000;
+ border-radius: 4px;
+ }
+
+ .actions {
+ text-align: center;
+ margin-top: 16px;
+ }
+
+ .btn {
+ padding: 8px 16px;
+ background: #0b57fa;
+ color: rgb(234, 223, 223);
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ }
+
+.btn.secondary {
+ background: gray;
+ }
