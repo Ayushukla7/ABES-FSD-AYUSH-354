@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Table</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        
+        .pricing-container {
+            display: flex; 
+            justify-content: center; 
+            gap: 30px; 
+            flex-wrap: wrap; 
+            padding: 20px;
+        }
+
+        
+        .pricing-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            flex-basis: 300px; 
+            
+            padding: 25px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+       
+        .pricing-card h2 {
+            font-size: 1.8em;
+            margin-top: 0;
+            color: #333;
+        }
+        
+       
+        .pricing-card .price {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #007bff;
+            margin: 20px 0;
+        }
+        
+       
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            color: #666;
+        }
+
+        .pricing-card ul li {
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+        }
+        
+     
+        .pricing-card button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        
+        .pricing-card button:hover {
+            background-color: #218838; 
+        }    
+        .pricing-card.highlight {
+            background-color: #e7f5ff; 
+            border-color: #007bff;
+            transform: scale(1.05); 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pricing-container">
+
+        <div class="pricing-card">
+            <h2>Basic</h2>
+            <p class="price">$10/mo</p>
+            <ul>
+                <li>10 GB Storage</li>
+                <li>1 User</li>
+                <li>Basic Support</li>
+            </ul>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="pricing-card highlight">
+            <h2>Standard</h2>
+            <p class="price">$20/mo</p>
+            <ul>
+                <li>50 GB Storage</li>
+                <li>5 Users</li>
+                <li>Priority Support</li>
+            </ul>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="pricing-card">
+            <h2>Premium</h2>
+            <p class="price">$30/mo</p>
+            <ul>
+                <li>100 GB Storage</li>
+                <li>Unlimited Users</li>
+                <li>24/7 Support</li>
+            </ul>
+            <button>Buy Now</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
