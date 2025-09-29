@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav {
+    background-color: rgb(14, 139, 0);
+    overflow: hidden;
+}
+
+.main-nav ul li {
+    float: left;
+}
+
+.main-nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    background-color: #337ab7;
+    color: yellow;
+}
