@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Registration Form</title>
+  <script src="validation.js" defer></script>
+</head>
+<body>
+  <h2>Registration Form</h2>
+
+  <form name="regForm" onsubmit="return validateForm()" novalidate>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" autocomplete="name" required>
+    <br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" autocomplete="new-password" required>
+    <br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" autocomplete="email" required>
+    <br><br>
+
+    <label for="phone">Phone No.:</label>
+    <input type="tel" id="phone" name="phone" inputmode="numeric" pattern="\d{10}" required>
+    <br><br>
+
+    <input type="submit" value="Register">
+  </form>
+</body>
+</html>
