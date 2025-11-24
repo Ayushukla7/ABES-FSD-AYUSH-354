@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+    <script>
+function validateForm() {
+    var name = document.forms["regForm"]["name"].value.trim();
+    var password = document.forms["regForm"]["password"].value;
+    var email = document.forms["regForm"]["email"].value.trim();
+    var phone = document.forms["regForm"]["phone"].value.trim();
+    var errorDiv = document.getElementById("error");
+    var error = "";
+
+    var namePattern = /^[A-Za-z ]+$/;
+    if (!namePattern.test(name) || name.length < 6) {
+        error = "Name must contain only alphabets and be at least 6 characters long.";
+    } else if (password.length < 6) {
+        error = "Password must be at least 6 characters long.";
+    } else {
+        var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}$/;
+        if (!emailPattern.test(email)) {
+            error = "Please enter a valid email address (e.g., name@domain.com).";
+        } else {
+            var phonePattern = /^[0-9]{10}$/;
+            if (!phonePattern.test(phone)) {
+                error = "Phone number must contain exactly 10 digits.";
+            }
+        }
+    }
+
+    if (error !== "") {
+        errorDiv.textContent = error;
+        errorDiv.style.color = "red";
+        return false;
+    } else {
+        errorDiv.textContent = "Registration successful!";
+        errorDiv.style.color = "green";
+        return false;
+    }
+}
+</script>
+   
+</head>
+<body>
+    <h1 align="center">Register</h1>
+    <form name="regForm" onsubmit="return validateForm()">
+        <table border="0" cellpadding="6" cellspacing="0" align="center">
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="name" required></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td>Email ID:</td>
+                <td><input type="text" name="email" required></td>
+            </tr>
+            <tr>
+                <td>Phone Number:</td>
+                <td><input type="text" name="phone" required></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="sex" value="Male">Male
+                    <input type="radio" name="sex" value="Female">Female
+                </td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td>
+                    <select name="day">
+                        <option value="">Day</option>
+                        <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+                        <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+                        <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
+                        <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+                        <option>21</option><option>22</option><option>23</option><option>24</option><option>25</option>
+                        <option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
+                        <option>31</option>
+                    </select>
+                    <select name="month">
+                        <option value="">Month</option>
+                        <option>January</option><option>February</option><option>March</option><option>April</option>
+                        <option>May</option><option>June</option><option>July</option><option>August</option>
+                        <option>September</option><option>October</option><option>November</option><option>December</option>
+                    </select>
+                    <select name="year">
+                        <option value="">Year</option>
+                        <option>1980</option><option>1981</option><option>1982</option><option>1983</option><option>1984</option>
+                        <option>1985</option><option>1986</option><option>1987</option><option>1988</option><option>1989</option>
+                        <option>1990</option><option>1991</option><option>1992</option><option>1993</option><option>1994</option>
+                        <option>1995</option><option>1996</option><option>1997</option><option>1998</option><option>1999</option>
+                        <option>2000</option><option>2001</option><option>2002</option><option>2003</option><option>2004</option>
+                        <option>2005</option><option>2006</option><option>2007</option><option>2008</option><option>2009</option>
+                        <option>2010</option><option>2011</option><option>2012</option><option>2013</option><option>2014</option>
+                        <option>2015</option><option>2016</option><option>2017</option><option>2018</option><option>2019</option>
+                        <option>2020</option><option>2021</option><option>2022</option><option>2023</option><option>2024</option>
+                        <option>2025</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Languages Known:</td>
+                <td>
+                    <input type="checkbox" name="lang" value="English">English
+                    <input type="checkbox" name="lang" value="Telugu">Telugu
+                    <input type="checkbox" name="lang" value="Hindi">Hindi
+                    <input type="checkbox" name="lang" value="Tamil">Tamil
+                </td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><textarea name="address" rows="4" cols="25"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div id="error" style="text-align:center; margin-top:10px;"></div>
+</body>
+</html>

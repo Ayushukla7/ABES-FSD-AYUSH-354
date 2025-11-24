@@ -1,0 +1,53 @@
+body {
+    background-image: url(library.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+}
+#text1{
+    color: black;
+}
+.container {
+    background-color: rgba(255, 255, 255, 0.85);
+    margin: 40px auto;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: rgba(255,255,255,0.85);
+}
+
+.header-row {
+    background-image: url('https://cdn.pixabay.com/photo/2016/03/09/09/30/books-1245690_1280.jpg');
+    background-size: cover;
+    color: white;
+    font-size: 28px;
+    text-shadow: 2px 2px 4px black;
+}
+
+.nav-row {
+    background-color: #f8d88c;
+    font-size: 18px;
+}
+
+.nav-row a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-row a:hover {
+    color: darkred;
+    text-decoration: underline;
+}
+
+td {
+    padding: 10px;
+}
